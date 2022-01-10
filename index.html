@@ -15,6 +15,7 @@
       src="https://kit.fontawesome.com/bb5fff0028.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./main.js" defer></script>
     <style>
       .attribution {
         font-size: 11px;
@@ -35,7 +36,7 @@
           <h1>We are launching <span class="text-black">soon!</span></h1>
           <p>Subscribe and get notified</p>
         </div>
-        <form action="" class="home-hero__form">
+        <form action="" id="notify-form" class="home-hero__form">
           <div class="email-input-container">
             <input
               type="email"
@@ -44,7 +45,7 @@
               class="email-input email-input--error"
               placeholder="Your email address..."
             />
-            <p class="email-error-message"></p>
+            <p id="email-error" class="email-error-message"></p>
           </div>
           <input type="submit" value="Notify Me" />
         </form>
