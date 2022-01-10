@@ -43,8 +43,8 @@ html:focus-within {
 /* Set core body defaults */
 body {
   min-height: 100vh;
-  text-rendering: optimizeSpeed;
   line-height: 1.5;
+  text-rendering: optimizeSpeed;
 }
 
 /* A elements that don't have a class get default styles */
@@ -55,8 +55,8 @@ a:not([class]) {
 /* Make images easier to work with */
 img,
 picture {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -76,21 +76,21 @@ select {
   *,
 *::before,
 *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
   }
 }
 .text-black {
-  color: var(--very-dark-blue);
   font-weight: 700;
+  color: var(--very-dark-blue);
 }
 
 body {
-  font-size: 1.25rem;
-  font-family: "Libre Franklin", sans-serif;
   padding: 2rem;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 1.25rem;
 }
 
 .header {
@@ -98,8 +98,8 @@ body {
 }
 
 .header-logo {
-  margin-inline: auto;
   height: 18px;
+  margin-inline: auto;
 }
 
 @media screen and (min-width: 769px) {
@@ -112,15 +112,15 @@ body {
 }
 
 .home-hero__content h1 {
-  color: var(--gray);
-  font-weight: 300;
   font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--gray);
 }
 
 .home-hero__content p {
-  color: var(--very-dark-blue);
-  font-weight: 300;
   font-size: 1rem;
+  font-weight: 300;
+  color: var(--very-dark-blue);
   margin-block: 1rem 2rem;
 }
 
@@ -135,12 +135,12 @@ body {
   }
 }
 .home-hero__form {
-  max-width: 325px;
-  margin-inline: auto;
   display: flex;
   align-items: flex-start;
-  gap: 0.75rem;
   flex-wrap: wrap;
+  max-width: 325px;
+  margin-inline: auto;
+  gap: 0.75rem;
 }
 
 @media screen and (min-width: 769px) {
@@ -153,13 +153,13 @@ body {
 }
 
 .home-hero__form input {
-  width: 100%;
-  border-radius: 2rem;
-  font-size: 0.8rem;
-  padding: 1em 2em;
   display: block;
-  width: 100%;
   border: unset;
+  border-radius: 2rem;
+  width: 100%;
+  width: 100%;
+  padding: 1em 2em;
+  font-size: 0.8rem;
 }
 
 .home-hero__form input:focus {
@@ -175,16 +175,16 @@ body {
 }
 
 .home-hero__form input::placeholder {
-  color: var(--gray);
   opacity: 0.75;
+  color: var(--gray);
 }
 
 .email-error-message {
-  font-size: 0.8rem;
-  color: var(--light-red);
-  font-style: italic;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
+  font-style: italic;
+  font-size: 0.8rem;
+  color: var(--light-red);
 }
 
 @media screen and (min-width: 769px) {
@@ -193,27 +193,28 @@ body {
   }
 
   .email-input {
-    flex: 1;
     flex-basis: unset;
+    flex: 1;
   }
 
   .email-error-message {
-    text-align: left;
     margin-left: 1.5rem;
+    text-align: left;
   }
 
   .home-hero__form input[type=submit] {
-    max-width: 205px;
     flex-basis: unset;
+    max-width: 205px;
   }
 }
 .home-hero__form input[type=submit] {
   flex-basis: 100%;
   background-color: var(--blue);
-  color: var(--white);
   font-weight: 600;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  color: var(--white);
+  cursor: pointer;
   transition: opacity 0.25s;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 .home-hero__form input[type=submit]:hover {
@@ -232,37 +233,49 @@ body {
 }
 
 .social-media {
-  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 1rem;
+  align-items: center;
   margin-top: 4rem;
-  color: var(--blue);
+  width: 100%;
+  gap: 1rem;
 }
 
 .social-media__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid var(--pale-blue);
   border-radius: 100%;
-  display: block;
-  width: 40px;
   height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 40px;
+  text-decoration: unset;
+  color: var(--blue);
 }
 
 .social-media__icon:hover {
-  transition: background-color 0.25s, color 0.25s;
   background-color: var(--blue);
   color: white;
+  transition: background-color 0.25s, color 0.25s;
 }
 
 .page-footer {
-  margin-block: 2rem;
   font-size: 0.8rem;
   color: var(--gray);
+  margin-block: 2rem;
   text-align: center;
+}
+
+.attribution {
+  margin-top: 1rem;
+  font-size: 0.6875rem;
+  color: var(--very-dark-blue);
+  text-align: center;
+}
+
+.attribution a {
+  font-weight: 700;
+  color: var(--blue);
 }
 
 /*# sourceMappingURL=styles.css.map */
