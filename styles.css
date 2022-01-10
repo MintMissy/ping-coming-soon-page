@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+:root {
+  --blue: hsl(223, 87%, 63%);
+  --pale-blue: hsl(223, 100%, 88%);
+  --light-red: hsl(354, 100%, 66%);
+  --gray: hsl(0, 0%, 59%);
+  --very-dark-blue: hsl(209, 33%, 12%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.text-black {
+  color: var(--very-dark-blue);
+  font-weight: 700;
+}
+
+body {
+  font-size: 1.25rem;
+  font-family: "Libre Franklin", sans-serif;
+  padding: 2rem;
+}
+
+.header {
+  margin-block: 3rem;
+}
+
+.header-logo {
+  margin-inline: auto;
+  height: 18px;
+}
+
+@media screen and (min-width: 769px) {
+  .header-logo {
+    height: 24px;
+  }
+}
+.home-hero {
+  text-align: center;
+}
+
+.home-hero__content h1 {
+  color: var(--gray);
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.home-hero__content p {
+  color: var(--very-dark-blue);
+  font-weight: 300;
+  font-size: 1rem;
+  margin-block: 1rem 2rem;
+}
+
+@media screen and (min-width: 769px) {
+  .home-hero__content h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-hero__content p {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+  }
+}
+.home-hero__form {
+  max-width: 325px;
+  margin-inline: auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 769px) {
+  .home-hero__form {
+    max-width: 600px;
+  }
+}
+.email-input-container {
+  flex-basis: 100%;
+}
+
+.home-hero__form input {
+  width: 100%;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  padding: 1em 2em;
+  display: block;
+  width: 100%;
+  border: unset;
+}
+
+.home-hero__form input:focus {
+  outline: none;
+}
+
+.email-input {
+  border: 1px solid var(--pale-blue) !important;
+}
+
+.email-input--error {
+  border-color: var(--light-red) !important;
+}
+
+.home-hero__form input::placeholder {
+  color: var(--gray);
+  opacity: 0.75;
+}
+
+.email-error-message {
+  font-size: 0.8rem;
+  color: var(--light-red);
+  font-style: italic;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 769px) {
+  .home-hero__form {
+    flex-wrap: nowrap;
+  }
+
+  .email-input {
+    flex: 1;
+    flex-basis: unset;
+  }
+
+  .email-error-message {
+    text-align: left;
+    margin-left: 1.5rem;
+  }
+
+  .home-hero__form input[type=submit] {
+    max-width: 205px;
+    flex-basis: unset;
+  }
+}
+.home-hero__form input[type=submit] {
+  flex-basis: 100%;
+  background-color: var(--blue);
+  color: var(--white);
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transition: opacity 0.25s;
+}
+
+.home-hero__form input[type=submit]:hover {
+  opacity: 0.9;
+}
+
+.home-hero__form input[type=submit]:focus {
+  opacity: 0.8;
+}
+
+.home-hero__banner {
+  display: block;
+  margin-top: 3rem;
+  max-width: min(620px, 100%);
+  margin-inline: auto;
+}
+
+.social-media {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 4rem;
+  color: var(--blue);
+}
+
+.social-media__icon {
+  border: 1px solid var(--pale-blue);
+  border-radius: 100%;
+  display: block;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-media__icon:hover {
+  transition: background-color 0.25s, color 0.25s;
+  background-color: var(--blue);
+  color: white;
+}
+
+.page-footer {
+  margin-block: 2rem;
+  font-size: 0.8rem;
+  color: var(--gray);
+  text-align: center;
+}
+
+/*# sourceMappingURL=styles.css.map */
