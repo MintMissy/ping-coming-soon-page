@@ -17,16 +17,20 @@ function validateForm(event) {
 
   if (email === '' || email === null) {
     setEmailErrorMessage('Whoops! It looks like you forgot to add your email');
+    emailInput.classList.add('email-input--error');
     event.preventDefault();
     return false;
   }
 
   if (!validateEmail(email)) {
     setEmailErrorMessage('Please provide a valid email address');
+    emailInput.classList.add('email-input--error');
     event.preventDefault();
     return false;
   }
 
+  emailInput.classList.remove('email-input--error');
+  setEmailErrorMessage('');
   return true;
 }
 
